@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue2</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>{{ greet('Morning') }}</h1>
+            <p>Name: {{ name }}</p>
+            <p>Job: {{ job }}</p>
+            <p><a :href="website">Tran Chi Developer</a></p>
+            <p v-html="websiteTag"></p>
+            <p><input type="text" :value="name"></p>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>

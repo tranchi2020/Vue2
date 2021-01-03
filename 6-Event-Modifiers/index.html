@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue2</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+
+            <!-- 2 The Vue Instance -->
+            <h1>2. The vue Instance</h1>
+            <p>{{ name }}</p>
+            <hr>
+
+            <!-- 3 Data Methods -->
+            <h1>3. Data Methods</h1>
+            <h2>{{ greet('Afternoon')}}</h2>
+            <p>Name: {{ name }}</p>
+            <p>Job: {{ job }}</p>
+            <hr>
+
+            <!-- 4 Data Binding -->
+            <h1>4. Data Binding</h1>
+            <p><a :href="website">Tran Chi Developer</a></p>
+            <p v-html="websiteTag"></p>
+            <input type="text" :value="name">
+            <hr>
+
+            <!-- 5 Events -->
+            <h1>5. Events</h1>
+            <p>My age: {{ age }}</p>
+            <button @click="add(1)">Add a Year</button>
+            <button @click="subtract(1)">Subtract a Year</button>
+            <button @dblclick="add(10)">Add 10 Years</button>
+            <button @dblclick="subtract(10)">Subtract 10 Years</button>
+            <div id="canvas" @mousemove="updateXY">{{ x }}, {{y}}</div>
+            <hr>
+
+            <!-- 6 Event Modifiers -->
+            <h1>6. Event Modifiers</h1>
+            <p>My age: {{ age }}</p>
+            <button @click.once="add(1)">Add a Year</button>
+            <a @click.prevent="click" href="https://tranchi2020.github.io">Tran Chi Developer</a>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>

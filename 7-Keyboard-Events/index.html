@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue2</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>Keyboard Events</h1>
+            <label>Name: </label>
+            <input type="text" @keyup.enter="logName">
+            <label>Age: </label>
+            <input type="text" @keyup.enter="logAge">
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>

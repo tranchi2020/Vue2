@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue2</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>Events</h1>
+
+            <hr>
+            <!-- Old -->
+            <h2>{{ greet('Afternoon') }}</h2>
+            <p>Name: {{ name }}</p>
+            <p>Job: {{ job }}</p>
+            
+            <!-- New -->
+            <hr>
+            <p>My age: {{ age }}</p>
+            <button @click="add(1)">Add a Year</button>
+            <button @click="sbutract(1)">Subtract a Year</button>
+            <button @dblclick="add(10)">Add 10 Years</button>
+            <button @dblclick="subtract(10)">Subtract 10 Years</button>
+
+            <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>
